@@ -8,7 +8,7 @@
 }
 
 .zoom-slide {
-  animation: zoomAnimation 3s ease-in-out;
+  animation: zoomAnimation 4.2s ease-in-out;
 }
 
 .zoom-swiper {
@@ -27,7 +27,7 @@
     transform: scale(1.4);
     opacity: 0;
   }
-  10% {
+  1% {
     opacity: 1;
   }
   100% {

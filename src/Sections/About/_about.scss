@@ -1,4 +1,4 @@
-.about {
+.about-cafe {
     background-color: rgba(76, 57, 33, 1);
     display: flex;
     flex-direction: column;
@@ -41,8 +41,16 @@ video {
     font-weight: 700;
 }
 
+.about-people {
+    background-color: rgb(183, 135, 82);
+}
+
+.people {
+    padding: 2rem 1.2rem;
+}
+
 @media (min-width: 1024px) {
-    .about {
+    .about-cafe {
         flex-direction: row;
         justify-content: space-between; 
     }

@@ -18,8 +18,10 @@
     }
     
     .about-cafe {
+        max-width: 35ch;       
         font-size: 1rem;
         font-weight: 300;
+        padding: 0;
     }
     
 
@@ -45,6 +47,14 @@
             margin-top: 2rem;
             border-radius: 30px;
             padding: 1rem 4rem;
+        }
+   }
+}
+
+@media (min-width: 1024px) {
+    .cafe-kl {
+        .about-cafe {
+            display: block;
         }
     }
 
