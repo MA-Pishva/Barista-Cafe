@@ -5,7 +5,7 @@ const CafeKL = () => {
     <div className="cafe-kl">
       <p className="site">Barista.co</p>
       <h2 className="title">Cafe KL</h2>
-      <div className="about">
+      <div className="about-cafe">
         <p>
           The café had been in the town for as long as anyone could remember,
           and it had become a beloved institution among the locals.

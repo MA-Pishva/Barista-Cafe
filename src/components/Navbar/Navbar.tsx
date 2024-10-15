@@ -32,7 +32,9 @@ const Navbar = () => {
                 className={`${activeItem === item ? "active" : ""}`}
                 onClick={() => handleItemClick(item)}
               >
-                <a href="#">{item}</a>
+                <a className="nav-item" href="#">
+                  {item}
+                </a>
               </li>
             ))}
             <a className="btn btn-outline-light" href="">

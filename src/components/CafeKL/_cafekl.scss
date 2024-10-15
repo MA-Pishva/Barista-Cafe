@@ -1,27 +1,72 @@
 .cafe-kl {
     padding: 0 1.2rem;
-    margin: 0 4rem;
+    margin: 0 2rem;
     color: white;
-    width: 400px;
+    width: calc(100% - 2.4rem);
+    padding: 0 1.2rem;
+
+    .site {
+        margin-top: 2rem;
+        font-size: 1rem;
+        font-style: italic;
+    }
+    
+    .title {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 2rem;
+    }
+    
+    .about-cafe {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    
+
+    .btn-outline-light {
+        border: 2px solid white;
+        padding: 0.7rem 1.2rem;
+        margin: 1rem 0;
+        font-size: 1rem;
+    }
 }
 
-.site {
-    margin: 0;
-    font-size: 1.6rem;
-    font-style: italic;
+@media (min-width: 768px) {
+    .cafe-kl {
+        .site, .about-cafe, .btn {
+            font-size: 2rem;
+        }
+
+        .title {
+            font-size: 4rem;
+        }
+
+        .btn {
+            margin-top: 2rem;
+            border-radius: 30px;
+            padding: 1rem 4rem;
+        }
+    }
+
 }
 
-.title {
-    font-size: 4.6rem;
-    font-weight: 800;
-    margin-bottom: 2rem;
+@media (min-width: 2560px) {
+    .cafe-kl {
+        .site, .about-cafe, .btn {
+            font-size: 4rem;
+        }
+
+        .title {
+            font-size: 8rem;
+        }
+
+        .btn {
+            margin-top: 4rem;
+            border-radius: 50px;
+            padding: 2rem 8rem;
+        }
+    }
+    
 }
 
-.about {
-    font-size: 2rem;
-    font-weight: 400;
-}
 
-.btn-outline-light {
-    border: 2px solid white;
-}
