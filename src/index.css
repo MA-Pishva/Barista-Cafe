@@ -6,7 +6,6 @@ html {
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
-  background-color: black;
 }
 
 .btn {
@@ -23,12 +22,13 @@ body {
 }
 
 @media (min-width: 991px) {
-  .btn-primary:hover {
-    background-color: rgb(221, 161, 94);
-  }
-
   .btn:hover {
     background-color: white;
     color: rgb(221, 161, 94);
+  }
+
+  .btn-primary:hover {
+    background-color: rgb(221, 161, 94);
+    color: white;
   }
 }

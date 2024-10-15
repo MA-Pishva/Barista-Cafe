@@ -22,7 +22,7 @@ const Navbar = () => {
               src="src/assets/images/coffee-beans.png"
               alt="Coffee Beans icon"
             />
-            <h2 className="p-2">Barista</h2>
+            <h2 className="header">Barista</h2>
           </a>
 
           <ul className="navbar-collapsed">

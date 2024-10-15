@@ -5,7 +5,7 @@ const Welcome = () => {
     <div className="welcome">
       <p className="welcome-to">welcome to Barista.co</p>
       <h1 className="cafe-name">Cafe Klang</h1>
-      <p className="text">your facvourite coffee daily lives.</p>
+      <p className="text">your favourite coffee daily lives.</p>
       <div>
         <button type="button" className="btn btn-outline-light">
           Our Story

@@ -1,9 +1,13 @@
 .welcome {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: absolute;
+    top: 25%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white; 
+    text-align: center;
+    z-index: 2; 
+    white-space: nowrap;
     font-size: 1.6rem;
-    color: white;
 }
 
 .welcome-to {
@@ -11,12 +15,13 @@
 }
 
 .cafe-name {
-    font-size: 5.4rem;
+    font-size: 4.4rem;
     font-weight: 700;
 }
 
 .text {
     font-size: 2rem;
+    font-weight: 300;
 }
 
 .btn-outline-light {
@@ -24,8 +29,13 @@
 }
 
 @media (min-width: 991px) {
+    .welcome {
+        top: 50%; 
+    }
+    .text{
+        font-size: 2rem;
+    }
     .cafe-name {
         font-size: 6.2rem;
     }
-
 }
