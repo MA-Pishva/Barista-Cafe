@@ -1,0 +1,106 @@
+.menus {
+    background-image: url("src/assets/images/slides/waitress.jpg");
+    background-size: cover ; 
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.cover {
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: 20px;     
+    z-index: 2;          
+    display: inline-block;
+    width: calc(100% - 2rem);
+}
+
+.cover:nth-child(1) {
+    margin-top: 4rem;
+}
+
+
+.cover:nth-child(2) {
+    margin-bottom: 4rem;
+}
+
+.menu-type {
+    padding-top: 3rem;
+    color: white;
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+.menu-time {
+    color: white;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .cover {
+        width: calc(100% - 7rem);
+    }
+
+    .cover:nth-child(1) {
+        margin-top: 6rem;
+    }
+    
+    .cover:nth-child(2) {
+        margin-bottom: 6rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .menus {
+        flex-direction: row;
+    }
+
+    .cover {
+        width: 100%;
+    }
+
+    .cover:nth-child(1) {
+        margin: 9rem 0;
+        margin-left: 10rem;
+    }
+
+    
+    .cover:nth-child(2) {
+        margin: 9rem 0;
+        margin-right: 10rem;
+    }
+
+    .menu-time {
+        font-size: 2.8rem;
+    }
+}
+
+@media (min-width: 2560px) {
+    .cover {
+        border-radius: 30px;
+    }
+
+    .cover:nth-child(1) {
+        margin: 15rem 0;
+        margin-left: 17rem;
+    }
+
+    
+    .cover:nth-child(2) {
+        margin: 15rem 0;
+        margin-right: 17rem;
+    }
+
+    .menu-type {
+        font-size: 4rem;
+    }
+
+    .menu-time {
+        font-size: 7rem;
+    }
+}
+
