@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, EffectFade } from "swiper/modules";
 import "swiper/scss";
@@ -9,17 +10,39 @@ import "./_slideshow.scss";
 
 const Slideshow = () => {
   const images = [bestFriends, waitress, youngFemale];
+  const swiperRef = useRef<any>(null);
+
+  useEffect(() => {
+    const handleSlideChange = () => {
+      const slides = document.querySelectorAll(".zoom-slide");
+      slides.forEach((slide) => {
+        (slide as HTMLElement).style.animation = "none";
+        setTimeout(() => {
+          (slide as HTMLElement).style.animation = "";
+        }, 10);
+      });
+    };
+
+    if (swiperRef.current) {
+      swiperRef.current.swiper.on("slideChange", handleSlideChange);
+    }
+
+    return () => {
+      if (swiperRef.current && swiperRef.current.swiper) {
+        swiperRef.current.swiper.off("slideChange", handleSlideChange);
+      }
+    };
+  }, []);
+
   return (
     <Swiper
+      ref={swiperRef}
       modules={[Pagination, Autoplay, EffectFade]}
       slidesPerView={1}
       autoplay={{ delay: 4200, disableOnInteraction: false }}
       loop={true}
       effect="fade"
       fadeEffect={{ crossFade: true }}
-      onSlideChange={(swiper) =>
-        console.log("Slide changed. Active index:", swiper.activeIndex)
-      }
       className="zoom-swiper"
     >
       {images.map((image, index) => (
