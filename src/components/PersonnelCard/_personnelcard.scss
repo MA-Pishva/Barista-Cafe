@@ -1,6 +1,6 @@
 @import './../../variables';
 
-.personnel {
+.personnel-card {
   position: relative;
   padding: 0;
   gap: 2rem;
@@ -26,12 +26,12 @@
   }
 
   &:hover {
-    .card-img {
+    .personnel-card-img {
       transform: scale(1.2);
     }
   }
 }
-img {
+.personnel-card-img {
   width: 100%;
   border-radius: 20px;
   position: relative;
@@ -39,7 +39,7 @@ img {
   transition: transform 0.5s ease; 
 }
 
-.card-content {
+.personnel-card-content {
   position: absolute;
   z-index: 2;
   bottom: 8%; 
@@ -47,49 +47,49 @@ img {
   width: 80%;
 }
 
-.card-header {
+.personnel-card-header {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 4rem;
 }
 
-.card-title {
+.personnel-card-title {
   font-size: 2.2rem;
 }
 
-.card-description {
+.personnel-card-description {
   font-size: 2rem;
   font-weight: 300;
   margin: 0;
 }
 
 @media (min-width: 1024px) {
-  .card-title {
+  .personnel-card-title {
     font-size: 2.8rem;
   }
 
-  .card-description {
+  .personnel-card-description {
     font-size: 2.6rem;
   }
 }
 
 @media (min-width: 1440px) {
-  .card-title {
+  .personnel-card-title {
     font-size: 2.2rem;
   }
 
-  .card-description {
+  .personnel-card-description {
     font-size: 2rem;
   }
 }
 
 @media (min-width: 2560px) {
-  .card-title {
+  .personnel-card-title {
     font-size: 4rem;
   }
 
-  .card-description {
+  .personnel-card-description {
     font-size: 3.8rem;
   }
 }

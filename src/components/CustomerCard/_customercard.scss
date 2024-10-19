@@ -1,93 +1,143 @@
-.customer {
-    position: relative;
-    padding: 2rem;
-  
-    .card-content {
-      position: relative; 
-      border-radius: 20px 20px 0 0;
-      background-image: url("src/assets/images/mid-section-waitress-wiping-espresso-machine-with-napkin-cafa-c.jpg");
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center; 
-      padding-top: 5rem; 
-      padding-bottom: 5rem; 
-    }
-  
-    .card-img {
-      position: absolute; 
-      width: 65px;
-      height: 65px;
-      border-radius: 50%;
-      object-fit: cover;
-      left: 50%;
-      top: 17%; 
-      transform: translate(-50%, -50%); 
-      z-index: 1; 
-    }
-  
-    .card-header {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column; 
-      align-items: center;
-    }
-  
-    .card-title {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem; 
-    }
-  
-    .card-tag {
-      font-size: 1.6rem;
-      color: $white-dim-color;
-    }
-  
-    .card-description {
-      font-size: 1.6rem;
-      background-color: $section-bg-color;
-      margin: 0;
-      padding: 1.5rem 2rem;
-      padding-bottom: 0;
-      color: $white-dim-color;
-      width: 100%; 
-      box-sizing: border-box; 
-      p {
-        padding-bottom: 2rem;
-        border-bottom: 1px solid $white-dim-color;
-        margin: 0;
-      }
-    }
-  
-    .card-rate {
-      background-color: $section-bg-color; 
-      margin: 0; 
-      padding: 1rem 2rem;
-      padding-right: 3rem; 
-      border-radius: 0 0 20px 20px; 
-      font-size: 2rem; 
-      display: flex; 
-      align-items: center; 
-      justify-content: space-between; 
-      gap: 0.5rem; 
-      width: 100%; 
-      box-sizing: border-box; 
-  
-      .test {
-        width: 90px;
-        font-weight: $font-weight-bold;
-        font-size: 1.6rem;
-        display: flex;
-        justify-content: space-between;
-      }
-    }
-  
-    .card-star {
-      display: flex;
-      gap: 0.2rem;
+@import "./../../variables";
+
+.customer-card  {
+  background-color: $white-color;
+}
+
+.customer-card {
+  padding: 0.5rem;
+  border-radius: 20px;
+  position: relative;
+}
+
+.customer-card-header, .customer-card-stars, .customer-card-rate {
+  display: flex;
+}
+
+.customer-card-header {
+  background-image: url("src/assets/images/mid-section-waitress-wiping-espresso-machine-with-napkin-cafa-c.jpg");
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px 20px 0 0;
+  padding: 2rem;
+}
+
+.customer-card-img {
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+}
+
+.customer-card-name {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.customer-card-role {
+  font-size: 1.6rem;
+  font-weight: $font-weight-thin;
+}
+
+.customer-card-body {
+  padding: 2rem;
+  background-color: $section-bg-color;
+  border-radius: 0 0 20px 20px;
+}
+
+.customer-card-description {
+  font-size: 1.6rem;
+  font-weight: $font-weight-light;
+  color: $white-dim-color;
+  margin-bottom: 1.6rem;
+}
+
+.rate {
+  font-size: 1.6rem;
+  font-weight: $font-weight-bold;
+  word-spacing: 0.8rem;
+}
+
+.customer-card-stars, .customer-card-rate {
+  flex-direction: row;
+}
+
+.customer-card-stars {
+  align-items: center;
+  gap: 2px;
+}
+
+.customer-card-rate {
+  border-top: 1px solid $border-underline-color;
+  padding-top: 1.6rem;
+  margin-top: 2.4rem;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .customer-card-header {
+    flex-direction: row;
+    gap: 1rem;
+    padding: 3rem;
+  }
+
+  .customer-card-img {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .customer-card {
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .customer-card {
+    max-width: 550px;
+  }
+
+  .customer-card-name {
+    font-size: 2.2rem;
+  }
+
+  .customer-card-description, .rate {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .customer-card {
+    max-width: 600px;
+  }
+
+  .customer-card-name {
+    font-size: 5.2rem;
+  }
+
+  .customer-card-description, .rate {
+    font-size: 3.5rem;
+  }
+  .customer-card-header {
+    padding: 5rem;
+  }
+
+  .customer-card-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .customer-card-role {
+    font-size: 3rem;
+  }
+
+  .customer-card-stars{
+    img {
+      width: 40px;
+      height: 40px;
     }
   }
-  
-  
-  
+}

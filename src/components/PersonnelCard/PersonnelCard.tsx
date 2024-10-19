@@ -10,14 +10,14 @@ interface PersonnelCardProps {
 
 const PersonnelCard = ({ title, role, img, children }: PersonnelCardProps) => {
   return (
-    <div className="personnel">
-      <img src={img} className="card-img" alt={title} />
-      <div className="card-content">
-        <div className="card-header">
-          <h2 className="card-title">{title}</h2>
+    <div className="personnel-card">
+      <img src={img} className="personnel-card-img" alt={title} />
+      <div className="personnel-card-content">
+        <div className="personnel-card-header">
+          <h2 className="personnel-card-title">{title}</h2>
           <Tag>{role}</Tag>
         </div>
-        <p className="card-description">{children}</p>
+        <p className="personnel-card-description">{children}</p>
       </div>
     </div>
   );
