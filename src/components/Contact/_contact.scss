@@ -1,0 +1,103 @@
+@import "./../../variables";
+
+.contact {
+    background-image: url("src/assets/images/slides/young-female.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 3.5rem;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        background-image: linear-gradient(
+            to bottom,
+            $dark-dim-background,
+            $primary-background
+        );
+      }
+}
+
+.contact-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    em {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+        margin: 0;
+        margin-bottom: 2.4rem;
+    }
+}
+
+.contact-body {
+    position: relative;
+
+
+}
+
+.contact-body {
+    iframe {
+        display: block;
+        margin: 5rem auto;
+        border-radius: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .contact {
+        padding: 5.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .contact-header {
+        align-items: start;
+        h2 {
+            font-size: 4.6rem;
+        }
+    }
+
+
+    .contact-body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .form {
+            width: 100%;
+        }
+
+        iframe {
+            margin: auto 8.8rem;
+        }
+
+    }
+}
+
+@media (min-width: 2560px) {
+    .contact-header {
+        em {
+            font-size: 3.6rem;
+        }
+        h2 {
+            font-size: 7.6rem;
+        }
+    }
+
+    .contact {
+        padding: 15rem;
+    }
+}
+
