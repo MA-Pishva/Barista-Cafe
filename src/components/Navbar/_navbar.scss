@@ -1,5 +1,9 @@
 @import "./../../variables";
 
+.navbar {
+  z-index: 4;
+}
+
 .navbar, .navbar-icon, .navbar-top, .navbar-list, .navbar-toggler, .navbar-header {
   display: flex;
 }

@@ -14,6 +14,7 @@ const CustomerCard = ({ name, img, children, rate }: CustomerCardProps) => {
       if (index <= rate)
         stars.push(
           <img
+            key={index}
             width="16px"
             height="16px"
             src="src/assets/images/star-full.svg"
@@ -23,6 +24,7 @@ const CustomerCard = ({ name, img, children, rate }: CustomerCardProps) => {
       else
         stars.push(
           <img
+            key={index}
             width="16px"
             height="16px"
             src="src/assets/images/star-empty.svg"

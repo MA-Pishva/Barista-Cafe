@@ -1,0 +1,130 @@
+@import "./../../variables";
+
+.footer, .footer-social, .footer-contact, .footer-opening-hours {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.footer {
+    gap: 4rem;
+    padding: 6rem 2rem;
+    padding-bottom: 2.4rem;
+}
+
+.footer-social {
+    padding: 0 1.2rem;
+    gap: 2.4rem;
+
+    em {
+        font-weight: $font-weight-thin;
+        display: block;
+    }
+
+    em, strong {
+        font-size: 1.6rem;
+    }
+    
+    img {
+        display: inline;
+        filter: brightness(0) invert(1);
+        width: 20px;
+        height: 20px;
+        padding-right: 1rem;
+    }
+
+}
+
+.footer-icons {
+    padding-top: 1rem;
+
+    img {
+        padding-right: 3rem;
+        transition: all 0.3s linear;
+    }
+
+    img:hover{
+        cursor: pointer;
+        transform: scale(1.5);
+    }
+}
+
+.footer-contact {
+    em, strong {
+        font-size: 1.6rem;
+    }
+
+    em{
+        font-weight: $font-weight-thin;
+    }
+}
+
+.footer-contact {
+    em {
+        margin-bottom: 2.4rem;
+    }
+    padding: 0 1.2rem;
+}
+
+.footer-phone {
+    padding-bottom: 1rem;;
+}
+
+.footer-phone:hover, .footer-email:hover {
+    em {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+.footer-opening-hours {
+    padding: 0 1.2rem;
+    em {
+        font-weight: $font-weight-thin;
+        font-size: 1.6rem;
+        margin-bottom: 2.4rem;
+    }
+
+}
+
+.footer-mf, .footer-saturday, .footer-sunday {
+    font-size: 1.2rem;
+}
+
+.footer-copyright {
+    padding: 0 3.2rem;
+    margin-bottom: 6rem;
+    em {
+        font-size: 1.6rem;
+        font-weight: $font-weight-thin;
+    }
+    strong {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 2560px) {
+    .footer, .footer-copyright {
+        em {
+            font-size: 3rem;
+        }
+
+        strong {
+            font-size: 4rem;
+        }
+    }
+
+    .footer-icons, .footer-social {
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+

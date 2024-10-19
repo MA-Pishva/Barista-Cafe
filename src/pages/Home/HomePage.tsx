@@ -4,6 +4,7 @@ import About from "../../components/About";
 import OurMenu from "../../components/OurMenu";
 import Reviews from "../../components/Reviews";
 import Contact from "../../components/Contact";
+import Footer from "../../components/Footer";
 import "./_homepage.scss";
 
 const HomePage = () => {
@@ -15,6 +16,7 @@ const HomePage = () => {
       <OurMenu />
       <Reviews />
       <Contact />
+      <Footer />
     </>
   );
 };
