@@ -1,17 +1,27 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, RefObject } from "react";
 import { Link } from "react-router-dom";
-import "./_navbar.scss";
 import Button from "../Button";
+import "./_navbar.scss";
 
-const Navbar = () => {
+interface NavbarProps {
+  scrollToSection: (ref: RefObject<HTMLDivElement>) => void;
+  refs: RefObject<HTMLDivElement>[];
+}
+
+const Navbar = ({ scrollToSection, refs }: NavbarProps) => {
   const [activeItem, setActiveItem] = useState("Welcome");
   const [isExpanded, setIsExpanded] = useState(false);
 
   const navbarItems = (items: string[]) => {
     return (
       <>
-        {items.map((item) => (
-          <Link to={`#${item}`} key={item} className="navbar-link">
+        {items.map((item, index) => (
+          <Link
+            to={"/"}
+            onClick={() => scrollToSection(refs[index])}
+            key={item}
+            className="navbar-link"
+          >
             <li
               className={`navbar-item ${activeItem === item ? "active" : ""}`}
               onClick={() => handleItemClick(item)}

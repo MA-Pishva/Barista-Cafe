@@ -1,9 +1,10 @@
 import CustomerCard from "../CustomerCard";
+import { forwardRef } from "react";
 import "./_reviews.scss";
 
-const Reviews = () => {
+const Reviews = forwardRef<HTMLDivElement>((_props, ref) => {
   return (
-    <div className="review">
+    <div className="review" id="Review" ref={ref}>
       <div className="review-header">
         <em>Reviews by Customers</em>
         <h2>Testimonials</h2>
@@ -41,6 +42,6 @@ const Reviews = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Reviews;

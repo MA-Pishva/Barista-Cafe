@@ -5,11 +5,14 @@ import boss from "./../../assets/images/team/boss.jpg";
 import manager from "./../../assets/images/team/manager.jpg";
 import senior from "./../../assets/images/team/senior.jpg";
 import barista from "./../../assets/images/team/barista.jpg";
+import { forwardRef, useRef } from "react";
+import { scrollToSection } from "../../pages/Home/HomePage";
 import "./_about.scss";
 
-const About = () => {
+const About = forwardRef<HTMLDivElement>((_props, ref) => {
+  const meetPeopleRef = useRef(null);
   return (
-    <div className="about" id="About">
+    <div className="about" id="About" ref={ref}>
       <div className="about-cafe">
         <div className="video-container">
           <video width="456" height="456" autoPlay muted loop>
@@ -41,12 +44,12 @@ const About = () => {
               or simply enjoying a quiet moment with a cup in hand.
             </p>
           </div>
-          <Link to="#About">
+          <Link to="/" onClick={() => scrollToSection(meetPeopleRef)}>
             <Button type="btn-outline">Meet Baristas</Button>
           </Link>
         </div>
       </div>
-      <div className="about-people">
+      <div className="about-people" id="meetpeople" ref={meetPeopleRef}>
         <div className="about-people-header">
           <em>Creative Baristas</em>
           <h2>Meet People</h2>
@@ -68,6 +71,6 @@ const About = () => {
       </div>
     </div>
   );
-};
+});
 
 export default About;

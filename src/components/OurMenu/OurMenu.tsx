@@ -1,9 +1,10 @@
-import "./_ourmenu.scss";
+import { forwardRef } from "react";
 import Menu from "../Menu";
+import "./_ourmenu.scss";
 
-export const OurMenu = () => {
+const OurMenu = forwardRef<HTMLDivElement>((_props, ref) => {
   return (
-    <div className="our-menu">
+    <div className="our-menu" id="OurMenu" ref={ref}>
       <Menu
         menuOffering="Delicious Menu"
         menuCategory="Breakfast"
@@ -72,6 +73,6 @@ export const OurMenu = () => {
       />
     </div>
   );
-};
+});
 
 export default OurMenu;

@@ -1,9 +1,10 @@
 import Form from "../Form";
+import { forwardRef } from "react";
 import "./_contact.scss";
 
-const Contact = () => {
+const Contact = forwardRef<HTMLDivElement>((_props, ref) => {
   return (
-    <div className="contact">
+    <div className="contact" id="Contact" ref={ref}>
       <div className="contact-header">
         <em>Say Hello</em>
         <h2>Contact</h2>
@@ -22,5 +23,5 @@ const Contact = () => {
       </div>
     </div>
   );
-};
+});
 export default Contact;
