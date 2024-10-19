@@ -1,3 +1,9 @@
+import facebook from "./../../assets/images/facebook.svg";
+import twitter from "./../../assets/images/twitter.svg";
+import whatsapp from "./../../assets/images/whatsapp.svg";
+import instagram from "./../../assets/images/instagram.svg";
+import telegram from "./../../assets/images/telegram.svg";
+
 import "./_footer.scss";
 
 const Footer = () => {
@@ -11,11 +17,11 @@ const Footer = () => {
             <strong>Bandra West, Mumbai, Maharashtra 400050, India</strong>
           </div>
           <div className="footer-icons">
-            <img src="src/assets/images/facebook.svg" alt="Facebook icon" />
-            <img src="src/assets/images/twitter.svg" alt="Twitter icon" />
-            <img src="src/assets/images/whatsapp.svg" alt="Whatsapp icon" />
-            <img src="src/assets/images/instagram.svg" alt="Instagram icon" />
-            <img src="src/assets/images/telegram.svg" alt="Telegram icon" />
+            <img src={facebook} alt="Facebook icon" />
+            <img src={twitter} alt="Twitter icon" />
+            <img src={whatsapp} alt="Whatsapp icon" />
+            <img src={instagram} alt="Instagram icon" />
+            <img src={telegram} alt="Telegram icon" />
           </div>
         </div>
         <div className="footer-contact">

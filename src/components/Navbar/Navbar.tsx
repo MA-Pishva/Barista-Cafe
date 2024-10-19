@@ -1,6 +1,7 @@
 import { useEffect, useState, RefObject } from "react";
 import { Link } from "react-router-dom";
 import Button from "../Button";
+import coffeeBeans from "./../../assets/images/coffee-beans.png";
 import "./_navbar.scss";
 
 interface NavbarProps {
@@ -70,10 +71,7 @@ const Navbar = ({ scrollToSection, refs }: NavbarProps) => {
         <div className="navbar-top">
           <div className="navbar-header">
             <Link className="navbar-icon navbar-link" to={"/"}>
-              <img
-                src="src/assets/images/coffee-beans.png"
-                alt="Coffee Beans icon"
-              />
+              <img src={coffeeBeans} alt="Coffee Beans icon" />
               <h2>Barista</h2>
             </Link>
             <button

@@ -1,5 +1,6 @@
+import fullStar from "./../../assets/images/star-full.svg";
+import emptyStar from "./../../assets/images/star-empty.svg";
 import "./_customercard.scss";
-
 interface CustomerCardProps {
   children: string;
   name: string;
@@ -17,7 +18,7 @@ const CustomerCard = ({ name, img, children, rate }: CustomerCardProps) => {
             key={index}
             width="16px"
             height="16px"
-            src="src/assets/images/star-full.svg"
+            src={fullStar}
             alt="Full-Star"
           />
         );
@@ -27,7 +28,7 @@ const CustomerCard = ({ name, img, children, rate }: CustomerCardProps) => {
             key={index}
             width="16px"
             height="16px"
-            src="src/assets/images/star-empty.svg"
+            src={emptyStar}
             alt="Empty-Star"
           />
         );

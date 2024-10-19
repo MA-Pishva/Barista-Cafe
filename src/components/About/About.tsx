@@ -7,6 +7,7 @@ import senior from "./../../assets/images/team/senior.jpg";
 import barista from "./../../assets/images/team/barista.jpg";
 import { forwardRef, useRef } from "react";
 import { scrollToSection } from "../../pages/Home/HomePage";
+import video from "./../../assets/videos/pexels-mike-jones-9046237.mp4";
 import "./_about.scss";
 
 const About = forwardRef<HTMLDivElement>((_props, ref) => {
@@ -16,10 +17,7 @@ const About = forwardRef<HTMLDivElement>((_props, ref) => {
       <div className="about-cafe">
         <div className="video-container">
           <video width="456" height="456" autoPlay muted loop>
-            <source
-              src="src/assets/videos/pexels-mike-jones-9046237.mp4"
-              type="video/mp4"
-            />
+            <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="overlay-text">
