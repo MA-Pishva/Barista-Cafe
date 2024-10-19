@@ -3,6 +3,7 @@ import twitter from "./../../assets/images/twitter.svg";
 import whatsapp from "./../../assets/images/whatsapp.svg";
 import instagram from "./../../assets/images/instagram.svg";
 import telegram from "./../../assets/images/telegram.svg";
+import map from "./../../assets/images/map.svg";
 
 import "./_footer.scss";
 
@@ -13,7 +14,7 @@ const Footer = () => {
         <div className="footer-social">
           <em>Where to find us?</em>
           <div className="footer-address">
-            <img src="src/assets/images/map.svg" alt="map-icon" />
+            <img src={map} alt="map-icon" />
             <strong>Bandra West, Mumbai, Maharashtra 400050, India</strong>
           </div>
           <div className="footer-icons">

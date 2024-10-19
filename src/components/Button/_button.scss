@@ -22,6 +22,10 @@
     border: 1.6px solid $white-color;
 }
 
+.btn:hover {
+    cursor: pointer;
+}
+
 .btn-primary:hover {
     background-color: $custom-btn-bg-hover-color;
     border-color: $custom-btn-bg-hover-color;
