@@ -1,0 +1,195 @@
+@import "./../../variables";
+
+.about-cafe, .about-people-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-cafe {
+    background-color: $about-cafe-background;
+    justify-content: center;
+    padding: 5rem 0;
+}
+
+.video-container {
+    width: calc(100% - 2rem);
+    padding-top: calc(100% - 2rem);;
+    border-radius: 20px;
+    overflow:hidden ;
+    position: relative; 
+    background-image: linear-gradient(to bottom, $dark-dim-background, $primary-background); 
+}
+
+video, .overlay-text {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.overlay-text, .cafe-title {
+    font-weight: $font-weight-bold;
+}
+
+video {
+    top: 0;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 2; 
+    opacity: 0.2; 
+}
+
+.overlay-text {
+    bottom: 0; 
+    color: $white-color;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.cafe-header {
+    color: $white-color;
+    width: calc(100% - 2.4rem);
+}
+
+.cafe-address {
+    font-size: 1.6rem;
+    font-weight: $font-weight-light;
+    font-style: italic;
+    margin: 0;
+    margin-top: 2rem;
+}
+
+.cafe-address, .cafe-description {
+    color: $white-dim-color;
+}
+
+.cafe-title {
+    font-size: 2.8rem;
+    margin: 0;
+}
+
+.cafe-description {
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: $font-weight-light;
+}
+
+.about-people {
+    background-color: $about-people-background;
+    padding: 5rem 0;    
+}
+
+.personnel-cards {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2.4rem;
+    padding: 0 1rem;
+}
+
+.about-people-header {
+    padding: 0 1.2rem;
+    padding-bottom: 3rem;
+
+    em {
+        font-size: 1.6rem;
+        color: $white-dim-color;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+        margin: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .about-cafe {
+        padding: 5rem 3rem;
+    }
+
+    .cafe-title {
+        font-size: 3.6rem;
+    }
+
+    .overlay-text {
+        font-size: 2.6rem;
+    }
+
+    .personnel-cards {
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        padding: 1rem 4rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about-cafe {
+        flex-direction: row;
+        justify-content: space-between; 
+        padding: 10rem 5rem;
+        gap: 5rem;
+    }
+
+    .cafe-title {
+        font-size: 4.6rem;
+    }
+
+    .cafe-description {
+        display: block;
+        max-width: 35ch;
+    }
+
+    .video-container {
+        width: 100%; 
+        padding-top: 46%; 
+    }
+
+    .overlay-text {
+        font-size: 3rem;
+    }
+
+    .about-people {
+        padding: 10rem 0;
+    }
+
+    .about-people-header {
+        h2 {
+            font-size: 4.6rem;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .cafe-description {
+        display: block;
+    }
+
+    .personnel-cards {
+    grid-template: 1fr / repeat(4, 1fr);
+    padding: 1rem 4rem;
+    }
+}
+
+@media (min-width: 2560px) {
+    .cafe-address, .cafe-description {
+        font-size: 4rem;
+        line-height: 6rem;
+    }
+
+    .cafe-title {
+        font-size: 8rem;
+    }
+
+    .overlay-text {
+        font-size: 8rem;
+    }
+
+    .about-people-header {
+        em {
+            font-size: 4rem;
+        }
+        h2 {
+            font-size: 7rem;
+        }
+    }
+}
+
+

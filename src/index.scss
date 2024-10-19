@@ -1,0 +1,18 @@
+@import "variables";
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-body;
+  color: $white-color;
+  background-color: $primary-color;
+  margin: 0;
+  width: 100%;
+}
+
+::selection {
+  background-color: $primary-background;
+}

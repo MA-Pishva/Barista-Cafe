@@ -1,0 +1,27 @@
+.our-menu {
+    background-image: url("src/assets/images/slides/waitress.jpg");
+    background-size: cover;
+    padding: 5rem 1.2rem;
+    display: grid;
+    grid-template-rows: (2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .our-menu {
+        padding: 4rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .our-menu {
+        grid-template: 1fr / repeat(2, 1fr);
+        padding: 10rem 4rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .our-menu {
+        padding: 10rem 7rem;
+    }
+}

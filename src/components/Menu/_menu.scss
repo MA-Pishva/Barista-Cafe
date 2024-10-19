@@ -1,0 +1,103 @@
+@import './../../variables';
+
+.menu, .menu-header, .item-header, .menu-items, .item-intro, .price {
+    display: flex;
+}
+
+.menu, .menu-header, .item-header {
+    align-items: center;
+}
+
+.menu, .menu-header, .menu-items, .item-intro {
+    flex-direction: column;
+}
+
+.menu {
+    background-color: $dark-background;
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.menu-header {
+    margin-bottom: 0.8rem;
+    em {
+        font-size: 1.6rem;
+        font-weight: $font-weight-thin;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+        margin: 0;
+    }
+}
+
+.menu-items {
+    padding-top: 1rem;
+    gap: 3rem;
+    width: 100%;
+}
+
+.item-header, .price {
+    flex-direction: row;
+}
+
+.item-header {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-intro {
+    gap: 0.5rem;
+}
+
+.item-name {
+    font-size: 1.8rem;
+    margin: 0;
+    margin-bottom: 0.8rem;
+}
+
+.price {
+    font-size: 1.6rem;
+    gap: 1rem;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: red;
+}
+
+.item-price {
+    color: $secondary-color;
+}
+
+.item-description {
+    font-size: 1.4rem;
+    color: $p-color;
+    margin-top: 0.8rem;
+    border-top: 1px solid $border-underline-color;
+    padding-top: 0.8rem;
+    margin-top: 0.8rem;
+}
+
+@media (min-width: 357px) {
+    .item-intro {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .menu {
+        padding: 4.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu-header {
+        h2 {
+            font-size: 2.8rem;
+        }
+    }
+
+    .item-name {
+        font-size: 2.2rem;
+    }
+}

@@ -1,22 +1,21 @@
+.slideshow, .swiper-slide img {
+  width: 100vw;
+  height: 100vh;
+}
+
+.zoom-swiper, .slideshow {
+  position: relative;
+}
+
 .slideshow {
     display: flex;
     justify-content: center; 
     align-items: center;
-    position: relative;
-    width: 100vw; 
-    height: 50vh;
-}
-
-.zoom-swiper {
-    position: relative;
 }
 
 .swiper-slide img {
-  width: 100vw; 
-  height: 90vh;
   object-fit: cover;
 }
-  
 
 @keyframes zoomAnimation {
   0% {
@@ -33,14 +32,4 @@
 
 .zoom-slide {
   animation: zoomAnimation 4.2s ease-in-out;
-}
-
-@media (min-width: 991px) {
-  .swiper-slide img {
-    height: 100vh; 
-  }
-
-  .slideshow {
-    height: 100vh; 
-  }
 }

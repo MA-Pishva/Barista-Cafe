@@ -1,53 +1,36 @@
+@import "./../../variables";
+
 .welcome {
+  height: 100vh;
+}
+
+.rectangle {
     position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    color: white; 
-    text-align: center;
-    z-index: 2; 
-    white-space: nowrap;
-    font-size: 1.6rem;
-}
+    top: 50%;                
+    left: 50%;            
+    transform: translate(-50%, -50%) rotate(-45deg); 
+    width: 230px;
+    height: 230px;          
+    background-color: $dark-background;
+    border-radius: 20px;     
+    display: inline-block;
+    z-index: 1;
+  }
 
-.welcome-to {
-    color: rgb(221, 161, 94);
-}
+  @media (min-width: 768px) {
+    .rectangle{
+        top: 57%;
+        left: 49%;
+        width: 350px;
+        height: 255px; 
+      }
+  }
 
-.cafe-name {
-    font-size: 4.4rem;
-    font-weight: 700;
-}
-
-.text {
-    font-size: 2rem;
-    font-weight: 300;
-}
-
-.btn-outline-light {
-    border: none;
-}
-
-@media (min-width: 991px) {
-    .welcome {
-        top: 50%; 
-    }
-    .text{
-        font-size: 2rem;
-    }
-    .cafe-name {
-        font-size: 6.2rem;
-    }
-}
-
-@media (min-width: 2560px) {
-    .welcome-to {
-        font-size: 6.4rem;
-    }
-    .text{
-        font-size: 8rem;
-    }
-    .cafe-name {
-        font-size: 24.8rem;
-    }
-}
+  @media (min-width: 2560px) {
+    .rectangle{
+      left: 48%;
+      width: 700px;
+      height: 550px;
+      border-radius: 50px;
+      }
+  }
